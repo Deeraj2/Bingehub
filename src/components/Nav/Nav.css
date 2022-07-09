@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+
+.nav{
+    padding: 20px;
+    height: 30px;
+    position: fixed;
+    width: 90%;
+    top: 0;
+    z-index: 1;
+
+    /* Animation */
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+    
+}
+.nav-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-content > h1{
+    margin-left: 40px;
+    font-size: 24px;
+    color: #845EC2;
+}
+.span{
+    color: #fff;
+}
+.nav-detail{
+    display: flex;
+    align-items: center;
+}
+.nav-detail > input{
+    height: 35px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: rgb(31, 30, 30);
+}
