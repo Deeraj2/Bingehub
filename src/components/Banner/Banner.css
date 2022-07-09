@@ -14,9 +14,9 @@
 }
 .banner-title{
     font-family: 'Noto Sans', sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
-    padding-bottom: 0.3rem;
+    font-size: 2.5rem;
+    font-weight: 900;
+    padding-bottom: 1rem;
 }
 .banner-desc{
     width: 45rem;
@@ -25,6 +25,9 @@
     font-size: 0.8rem;
     max-width: 360px;
     height: 800px;
+}
+.banner-btns{
+    display: flex;
 }
 .banner-btn {
     cursor: pointer;

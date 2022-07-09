@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { TrendingList } from '../../api/api';
 import AliceCarousel from 'react-alice-carousel'
 import './Banner.css';
+import BannerModal from './BannerModal';
 
 function Banner() {
 
@@ -20,7 +21,6 @@ function Banner() {
         return string?.length > n ? string.substr(0, n-1) + "..." : string
     }
 
-    console.log(trending)
 
     const items = trending.map((movie)=>{
         return(
@@ -32,9 +32,9 @@ function Banner() {
                 }}
                 >
                 <div className='banner-content'>
-                    <h1 className='banner-title'>{movie?.title == null ? movie?.original_name : movie?.title}</h1>
+                    <h1 className='banner-title'>{movie?.title == null ? movie?.name : movie?.title}</h1>
                     <div className='banner-btns'>
-                        <button className='banner-btn'>View</button>
+                        <BannerModal movie={movie}/>
                         <button className='banner-btn'>My list</button>
                     </div>
                     <h1 className='banner-desc'>{truncate(movie?.overview, 150)}</h1>
@@ -43,6 +43,8 @@ function Banner() {
             </header>
         )
     })
+
+    console.log(trending)
 
     const responsive = {
       0: {
@@ -54,7 +56,7 @@ function Banner() {
     <AliceCarousel 
         mouseTracking
         infinite
-        autoPlayInterval={1000}
+        autoPlayInterval={2000}
         animationDuration={1500}
         disableDotsControls
         disableButtonsControls

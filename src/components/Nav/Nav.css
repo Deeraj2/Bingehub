@@ -4,7 +4,7 @@
     padding: 20px;
     height: 30px;
     position: fixed;
-    width: 90%;
+    width: 100%;
     top: 0;
     z-index: 1;
 
@@ -29,6 +29,7 @@
 .nav-detail{
     display: flex;
     align-items: center;
+    margin-right: 3rem;
 }
 .nav-detail > input{
     height: 35px;
@@ -39,4 +40,7 @@
     border: none;
     color: #fff;
     background-color: rgb(31, 30, 30);
+}
+.nav_black {
+    background-color: #111;
 }
