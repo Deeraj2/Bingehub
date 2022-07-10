@@ -33,6 +33,7 @@ function MoviePage() {
     <div  className='movie-detail'>
         <img className='page-poster' src={`${baseURL}${ movie?.poster_path}`} alt={movie?.original_title} />
         <h1 className='page-title'>{movie?.title !== null ? (movie?.title) :(movie?.original_title)}</h1>
+        <p className='page-tagline'>{movie?.tagline}</p>
         <a className='page-href' href={movie?.homepage}>{movie?.homepage}</a>
         <p className='page-genre'>Genres: {
             movie?.genres.map((genre)=>(
@@ -46,7 +47,7 @@ function MoviePage() {
         </div>
         <div className='page-studio'>
             <h4 className='studio-p'>Company: </h4>
-            <img className='studio-img' src={`${baseURL}${ movie?.production_companies[0].logo_path}`} alt={ movie?.production_companies[0].name} />
+            {movie?.production_companies[0].logo_path !== null ? (<img className='studio-img' src={`${baseURL}${ movie?.production_companies[0].logo_path}`} alt={ movie?.production_companies[0].name} />) : (<h4>{movie?.production_companies[0].name}</h4>)}
         </div>
         { movie?.budget !== 0 ?  (<h4 className='page-budget'>Budget:&nbsp;{movie?.budget.toString().slice(0, -6)}M</h4>) : null }
         <h1 className='page-desc'>{movie?.overview}</h1>

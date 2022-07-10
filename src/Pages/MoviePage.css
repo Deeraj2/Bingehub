@@ -16,7 +16,6 @@
 .page-title{
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 7px;
 }
 .page-genre{
     margin-top: 1rem;
@@ -57,4 +56,10 @@
 }
 .studio-p{
     margin-right: 10px;
+}
+.page-tagline{
+    font-size: 20px;
+    margin-top: 4px;
+    margin-bottom: 7px;
+    font-weight: 600;
 }
