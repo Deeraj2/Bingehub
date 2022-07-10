@@ -1,0 +1,60 @@
+.page-poster{
+    max-height: 300px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-top: 3rem;
+}
+.movie-page{
+    height: 100vh;
+    position: relative;
+    object-fit: contain;
+}
+.movie-detail{
+    padding: 50px;
+}
+.page-title{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+.page-genre{
+    margin-top: 1rem;
+    font-weight: 600;
+}
+.page-info{
+    display: flex;
+    margin-top: 10px;
+    font-weight: 600;
+    color: whitesmoke;
+}
+.page-date {
+    padding-top: 3px;
+    margin-left: 20px;
+}
+.page-href{
+    color: whitesmoke;
+    text-decoration: none;
+}
+.page-href:hover{
+    color: lightgray;
+    text-decoration: underline;
+}
+.page-desc{
+    width: 45rem;
+    line-height: 1.3;
+    padding-top: 1rem;
+    font-size: 1rem;
+}
+.studio-img{
+    height: 30px;
+}
+.page-studio{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.studio-p{
+    margin-right: 10px;
+}

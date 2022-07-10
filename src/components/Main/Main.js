@@ -1,10 +1,13 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router';
 import './Main.css';
 
-function Main({fetchURL, title, isLargePoster }) {
+function Main({fetchURL, title }) {
 
     const [movies, setMovies] = useState([])
+
+    const navigate = useNavigate();
 
     const baseURL = "https://image.tmdb.org/t/p/original/"
 
@@ -27,7 +30,8 @@ function Main({fetchURL, title, isLargePoster }) {
                 return (
                     <img
                         className= "row-posterLarge"
-                        key={movie.id}
+                        onClick={()=>navigate(`/movie/${movie.id}`)}
+                        key={movie?.name}
                         src={`${baseURL}${ movie.poster_path}`} alt={movie?.name} />
                  )
                              

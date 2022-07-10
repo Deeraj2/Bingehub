@@ -33,6 +33,7 @@ export default function BannerModal({movie}) {
                 <p>⭐<span>{movie?.vote_average.toFixed(1)}/10</span></p>
                 <p className='view-date'>{movie?.release_date == null ? movie?.first_air_date : movie?.release_date}</p>
             </div>
+            
             <h1 className='view-desc'>{movie?.overview}</h1>
         
         </div>

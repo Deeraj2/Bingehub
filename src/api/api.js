@@ -14,3 +14,5 @@ export const HorrorMovies = () => `https://api.themoviedb.org/3/discover/movie?a
 export const RomanceMovies = () => `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=10749`
 
 export const Documentaries = () => `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=99`
+
+export const singleMovie = (movie_id) => `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${process.env.REACT_APP_API_KEY}`

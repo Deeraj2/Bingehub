@@ -21,6 +21,7 @@
 .nav-content > h1{
     margin-left: 40px;
     font-size: 24px;
+    cursor: pointer;
     color: #845EC2;
 }
 .span{

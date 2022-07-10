@@ -7,6 +7,7 @@ import {
 import './App.css';
 import Nav from './components/Nav/Nav';
 import HomePage from './Pages/HomePage';
+import MoviePage from './Pages/MoviePage';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       <BrowserRouter>
         <Nav />
         <Routes>  
-          <Route path='/' element={ <HomePage /> } />
+          <Route path="/" element={ <HomePage /> } />
+          <Route path="/movie/:movie_id" element={ <MoviePage /> } />
         </Routes>
       </BrowserRouter>
     </div>
