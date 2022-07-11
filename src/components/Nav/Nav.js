@@ -27,7 +27,6 @@ function Nav() {
         <div className='nav-content'>
             <h1 onClick={()=>navigate('/')}>Binge<span className='span'>Hub</span></h1>
             <div className='nav-detail'>
-                <input type='search' placeholder="Search" />
                 <Avatar sx={{backgroundColor: "#845EC2"}} alt='user.name' />
             </div>
         </div>

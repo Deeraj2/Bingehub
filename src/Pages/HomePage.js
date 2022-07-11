@@ -7,13 +7,13 @@ function HomePage() {
   return (
     <div>
         <Banner />
-        <Main title="NETFLIX ORIGINALS" fetchURL={ SeriesList()} isLargePoster />
-        <Main title="TOP RATED" fetchURL={ TopRated() } isLargePoster  />
-        <Main title="ACTION MOVIES" fetchURL={ ActionMovies() }  isLargePoster/>
-        <Main title="COMEDY MOVIES" fetchURL={ ComdeyMovies() }  isLargePoster/>
-        <Main title="HORROR MOVIES" fetchURL={ HorrorMovies() }  isLargePoster/>
-        <Main title="ROMANCE MOVIES" fetchURL={ RomanceMovies() }  isLargePoster/>
-        <Main title="DOCUMENTARIES" fetchURL={ Documentaries() }  isLargePoster/>
+        <Main title="NETFLIX ORIGINALS" fetchURL={ SeriesList()} tvSeries />
+        <Main title="TOP RATED" fetchURL={ TopRated() }  />
+        <Main title="ACTION MOVIES" fetchURL={ ActionMovies() }  />
+        <Main title="COMEDY MOVIES" fetchURL={ ComdeyMovies() }  />
+        <Main title="HORROR MOVIES" fetchURL={ HorrorMovies() }  />
+        <Main title="ROMANCE MOVIES" fetchURL={ RomanceMovies() }  />
+        <Main title="DOCUMENTARIES" fetchURL={ Documentaries() }  />
     </div>
   )
 }

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import './Main.css';
 
-function Main({fetchURL, title }) {
+function Main({fetchURL, title, tvSeries}) {
 
     const [movies, setMovies] = useState([])
 
@@ -30,7 +30,7 @@ function Main({fetchURL, title }) {
                 return (
                     <img
                         className= "row-posterLarge"
-                        onClick={()=>navigate(`/movie/${movie.id}`)}
+                        onClick={ tvSeries ? (()=>navigate(`/tv/${movie.id }`)) : (()=>navigate(`/movie/${movie.id }`))}
                         key={movie?.name}
                         src={`${baseURL}${ movie.poster_path}`} alt={movie?.name} />
                  )

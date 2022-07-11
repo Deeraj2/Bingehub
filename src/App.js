@@ -8,6 +8,7 @@ import './App.css';
 import Nav from './components/Nav/Nav';
 import HomePage from './Pages/HomePage';
 import MoviePage from './Pages/MoviePage';
+import TvPage from './Pages/TvPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>  
           <Route path="/" element={ <HomePage /> } />
           <Route path="/movie/:movie_id" element={ <MoviePage /> } />
+          <Route path="/tv/:tv_id" element={ <TvPage /> } />
         </Routes>
       </BrowserRouter>
     </div>
