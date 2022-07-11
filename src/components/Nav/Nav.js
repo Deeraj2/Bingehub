@@ -1,12 +1,11 @@
-import { Avatar } from '@mui/material';
 import React, {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router';
 import './Nav.css';
+import Sidebar from './Sidebar';
 
-function Nav() {
+function Nav({user, setAlert}) {
 
     const [show, setShow] = useState(false)
-
     const navigate = useNavigate()
 
     const animationNavBar = ()=>{
@@ -27,9 +26,10 @@ function Nav() {
         <div className='nav-content'>
             <h1 onClick={()=>navigate('/')}>Binge<span className='span'>Hub</span></h1>
             <div className='nav-detail'>
-                <Avatar sx={{backgroundColor: "#845EC2"}} alt='user.name' />
+                <Sidebar user={user}  setAlert={setAlert} />
             </div>
         </div>
+        
     </div>  
   )
 }

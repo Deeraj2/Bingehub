@@ -44,7 +44,6 @@ function Banner() {
         )
     })
 
-    console.log(trending)
 
     const responsive = {
       0: {
