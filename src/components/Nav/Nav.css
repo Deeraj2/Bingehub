@@ -15,22 +15,28 @@
 }
 .nav-content{
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 .nav-content > h1{
-    margin-left: 40px;
+    position: fixed;
+    top: 25px;
+    left: 0;
+    width: 80px;
+    cursor: pointer;
+    object-fit: contain;
+    padding-left: 20px;
     font-size: 24px;
     cursor: pointer;
     color: #845EC2;
 }
+.avatar{
+    position: fixed;
+    right: 3.5rem;
+    cursor: pointer;
+    top: 15px;
+}
 .span{
     color: #fff;
-}
-.nav-detail{
-    display: flex;
-    align-items: center;
-    margin-right: 3rem;
 }
 .nav_black {
     background-color: #111;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import {
   BrowserRouter,
   Routes,
@@ -11,31 +11,27 @@ import HomePage from './Pages/HomePage';
 import MoviePage from './Pages/MoviePage';
 import TvPage from './Pages/TvPage';
 import AlertData from './components/Alert/Alert';
-import firebase from 'firebase/compat/app';
+import { Movie } from './Context';
+
 
 function App() {
 
-  const [user, setUser ] = useState(null)
+  
   const [alert, setAlert] = useState({
     ope: false,
     message: '',
     type: 'success'
   })
   
-  useEffect(()=>{
-    firebase.auth().onAuthStateChanged((user) =>{
-      if(user) setUser(user)
-      else setUser(null)
-    })
-  }, [])
+  const { user } = useContext(Movie)
 
 
   return (
     <div className='app'>
       {user  ? (<BrowserRouter>
-        <Nav user={user}  setAlert={setAlert}/>
+        <Nav   setAlert={setAlert}/>
         <Routes>  
-          <Route path="/" element={ <HomePage /> } />
+          <Route path="/" element={ <HomePage  /> } />
           <Route path="/movie/:movie_id" element={ <MoviePage /> } />
           <Route path="/tv/:tv_id" element={ <TvPage /> } />
         </Routes>

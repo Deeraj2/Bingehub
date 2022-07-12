@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router';
+import Dropdown from './Dropdown';
 import './Nav.css';
-import Sidebar from './Sidebar';
 
-function Nav({user, setAlert}) {
+function Nav({ setAlert}) {
 
     const [show, setShow] = useState(false)
     const navigate = useNavigate()
@@ -25,8 +25,8 @@ function Nav({user, setAlert}) {
     <div className={`nav  ${show &&  'nav_black'}`}>
         <div className='nav-content'>
             <h1 onClick={()=>navigate('/')}>Binge<span className='span'>Hub</span></h1>
-            <div className='nav-detail'>
-                <Sidebar user={user}  setAlert={setAlert} />
+            <div className='avatar'>
+                <Dropdown setAlert={setAlert} />
             </div>
         </div>
         

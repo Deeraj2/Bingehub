@@ -5,11 +5,13 @@ import './Main.css';
 
 function Main({fetchURL, title, tvSeries}) {
 
+
     const [movies, setMovies] = useState([])
-
     const navigate = useNavigate();
-
     const baseURL = "https://image.tmdb.org/t/p/original/"
+
+
+
 
     useEffect(()=>{
         const fetchMovies = async()=>{
