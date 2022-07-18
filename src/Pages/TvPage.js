@@ -48,10 +48,12 @@ function TvPage() {
             <p>{tv?.number_of_seasons !== 1 ? "Seasons" : "Season"}: <span>{tv?.number_of_seasons}</span></p>
             <p className='page-episodes'>Episodes: {tv?.number_of_episodes}</p>
         </div>
-        <div className='page-studio'>
+
+        {tv?.production_companies[0] && (<div className='page-studio'>
             <h4 className='studio-p'>Company: </h4>
-            {tv?.production_companies[0].logo_path !== null ? (<img className='studio-img' src={`${baseURL}${ tv?.production_companies[0].logo_path}`} alt={ tv?.production_companies[0].name} />) : (<h4>{tv?.production_companies[0].name}</h4>)}
-        </div>
+            {tv?.production_companies[0]?.logo_path !== 1 ? (<img className='studio-img' src={`${baseURL}${ tv?.production_companies[0].logo_path}`} alt={ tv?.production_companies[0].name} />) : (<h4>{tv?.production_companies[0].name}</h4>)}
+        </div>) 
+        }
         <h1 className='page-desc'>{tv?.overview}</h1>
         <h2 className='page-sesonTitle'>{tv?.number_of_seasons !== 1 ? "Seasons" : "Season"}:</h2>
         {tv?.seasons.map((season) =>(
